@@ -5,8 +5,10 @@ import 'package:learn_cubit/core/routing/routes.dart';
 import 'package:learn_cubit/core/theme/colors.dart';
 
 class DocApp extends StatelessWidget {
-  final AppRouter appRouter;
-  const DocApp({super.key, required this.appRouter});
+  const DocApp({super.key});
+
+  // final AppRouter appRouter;
+  // const DocApp({super.key, required this.appRouter});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class DocApp extends StatelessWidget {
           title: "Doc App",
           debugShowCheckedModeBanner: false,
           initialRoute: Routes.onBordingScreen,
-          onGenerateRoute: appRouter.generateRoute,
+          // onGenerateRoute: appRouter.generateRoute,
           theme: ThemeData(
             primaryColor: ColorsManager.mainBlue,
             scaffoldBackgroundColor: Colors.white,
