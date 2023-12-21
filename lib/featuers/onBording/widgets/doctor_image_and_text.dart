@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import '../../../core/theme/styles.dart';
 
 class DoctorImageAndText extends StatelessWidget {
@@ -10,20 +10,30 @@ class DoctorImageAndText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        SvgPicture.asset('assets/svgs/doc_background.svg'),
-        Container(
-          foregroundDecoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Colors.white,
-                Colors.white.withOpacity(0.0),
-              ],
-              begin: Alignment.bottomCenter,
-              end: Alignment.topCenter,
-              stops: const [0.14, 0.4],
-            ),
+        Padding(
+          padding: EdgeInsets.only(
+            right: 16.w,
           ),
-          child: Image.asset('assets/images/onboarding_doctor.png'),
+          child: SvgPicture.asset('assets/svgs/doc_background.svg'),
+        ),
+        Padding(
+          padding: EdgeInsets.only(
+            top: 16.h,
+          ),
+          child: Container(
+            foregroundDecoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Colors.white,
+                  Colors.white.withOpacity(0.0),
+                ],
+                begin: Alignment.bottomCenter,
+                end: Alignment.topCenter,
+                stops: const [0.14, 0.4],
+              ),
+            ),
+            child: Image.asset('assets/images/onboarding_doctor.png'),
+          ),
         ),
         Positioned(
           bottom: 30,
